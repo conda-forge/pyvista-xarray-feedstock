@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - python >=3.7
-    - pyvista
+    - python >=3.8
+    - pyvista >=0.37.0
     - scooby
-    - xarray <2022.9.0,>2022.3.0
+    - xarray >=2022.12.0
 
 test:
   imports:
