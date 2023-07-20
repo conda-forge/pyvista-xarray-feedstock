@@ -1,11 +1,11 @@
-About pyvista-xarray
-====================
+About pyvista-xarray-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyvista-xarray-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pyvista/pyvista-xarray
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyvista-xarray-feedstock/blob/main/LICENSE.txt)
 
 Summary: PyVista DataArray accessors for xarray
 
