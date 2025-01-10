@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyvista-xarray-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyvista-xarray-{{ version }}.tar.gz
   sha256: c25d555e27c6b9f2cda5a14feefb4cc3ba8f5b93f70f876779a0a5e0fded7651
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pyvista >=0.37
     - scooby
     - xarray >=2022.12.0
@@ -33,6 +33,7 @@ test:
     - python -c "import pvxarray, xarray; da = xarray.DataArray(); assert hasattr(da, 'pyvista')"
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyvista/pyvista-xarray
