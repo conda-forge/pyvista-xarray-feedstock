@@ -1,18 +1,18 @@
 {% set name = "pyvista-xarray" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyvista-xarray-{{ version }}.tar.gz
-  sha256: c25d555e27c6b9f2cda5a14feefb4cc3ba8f5b93f70f876779a0a5e0fded7651
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 04ba84134a93c47ac5b8593bb31e4b6f5ad59ce72fd25100238ae96abecd5f52
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
